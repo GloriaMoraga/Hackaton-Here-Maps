@@ -13,14 +13,39 @@ class Map extends Component {
             app_id: "GkUohGm3fVKilW9qMHcb",
             app_code: "TXWMDz0kPxL0ZkRWCj-u5w",
             useHTTPS: true,
-            // theme: props.theme,
-            // style: props.style,
+          
         }
     }
 
-    // TODO: Add theme selection discussed later HERE
+  
 
-    componentDidUpdate() {
+    componentDidMount() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    this.map.setCenter({
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    });
+                    let myMarker = new window.H.map.Marker({lat:position.coords.latitude, lng:position.coords.longitude});
+                    (this.map).addObject(myMarker);
+
+                    //para colocar un radio en color azul un circulo.
+
+                   // let stylePto = {fillColor: 'rgba(35, 51, 129, 0.3)',lineWidth: 5,strokeColor: 'rgba(114, 38, 51, 1)'};
+                    // let circle = new window.H.map.Circle(
+                    // new window.H.geo.Point(position.coords.latitude, position.coords.longitude),1000,{stylePto: stylePto} );
+                    // circle.setData('Circle');
+                    // let container = new window.H.map.Group({objects: [circle]});
+                    this.map.addObject(container);
+
+                },
+                (error) => this.setState({
+                    error: error.message
+                })
+            );
+        }
+
         this.platform = new window.H.service.Platform(this.state);
 
         let layer = this.platform.createDefaultLayers();
