@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Map from './components/mapas/Mapas.js';
 import Header from './components/header/Header.js';
+import Footer from './components/footer/Footer.js';
 
 
 class App extends Component {
@@ -41,16 +42,18 @@ class App extends Component {
         return (
          
             <div className="App">
-            <Header />
-            {console.log(this.state.lng)}   
+            <Header /> 
             <Map
                 lat= { this.state.lat }
                 lng= { this.state.lng }
-                zoom="12"
+                zoom="15"
                 theme="normal.day"
-            />)
+            />
+            <Footer />
+
             </div>
-        );
+            )
+      
     }
 }
 

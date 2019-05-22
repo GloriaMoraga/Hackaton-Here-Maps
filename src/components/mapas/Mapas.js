@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './mapas.css';
 
 
 class Map extends Component {
@@ -38,25 +39,11 @@ class Map extends Component {
 
         
     }    
-    // changeTheme(theme, style) {
-    //     let tiles = this.platform.getMapTileService({'type': 'base'});
-    //     let layer = tiles.createTileLayer(
-    //         'maptile',
-    //         theme,
-    //         256,
-    //         'png',
-    //         {'style': style}
-    //     );
-    //     this.map.setBaseLayer(layer);
-    // }
-    // shouldComponentUpdate(props, state) {
-    //     this.changeTheme(props.theme, props.style);
-    //     return false;
-    // }
+  
 
     render() {
         return (
-            <div id="here-map" style={{width: '100%', height: '100vh', background: 'grey' }} />
+            <div id="here-map" className="map-style"/>
         );
     }
 }
