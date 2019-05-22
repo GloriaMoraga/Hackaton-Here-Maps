@@ -9,13 +9,8 @@ class Map extends Component {
         this.map = null;
 
         this.state = {
-            app_id: props.app_id,
-            app_code: props.app_code,
-            center: {
-                lat: props.lat,
-                lng: props.lng,
-            },
-            zoom: props.zoom,
+            app_id: "GkUohGm3fVKilW9qMHcb",
+            app_code: "TXWMDz0kPxL0ZkRWCj-u5w",
             theme: props.theme,
             style: props.style,
         }
@@ -23,17 +18,18 @@ class Map extends Component {
 
     // TODO: Add theme selection discussed later HERE
 
-    componentDidMount() {
+    componentDidUpdate() {
         this.platform = new window.H.service.Platform(this.state);
 
         let layer = this.platform.createDefaultLayers();
         let container = document.getElementById('here-map');
 
         this.map = new window.H.Map(container, layer.normal.map, {
-            center: this.state.center,
-            zoom: this.state.zoom,
+            center: {
+                lat: this.props.lat,
+                lng: this.props.lng, },
+            zoom: this.props.zoom,
           })
-
         let events = new window.H.mapevents.MapEvents(this.map);
         // eslint-disable-next-line
         let behavior = new window.H.mapevents.Behavior(events);
@@ -42,21 +38,21 @@ class Map extends Component {
 
         
     }    
-    changeTheme(theme, style) {
-        let tiles = this.platform.getMapTileService({'type': 'base'});
-        let layer = tiles.createTileLayer(
-            'maptile',
-            theme,
-            256,
-            'png',
-            {'style': style}
-        );
-        this.map.setBaseLayer(layer);
-    }
-    shouldComponentUpdate(props, state) {
-        this.changeTheme(props.theme, props.style);
-        return false;
-    }
+    // changeTheme(theme, style) {
+    //     let tiles = this.platform.getMapTileService({'type': 'base'});
+    //     let layer = tiles.createTileLayer(
+    //         'maptile',
+    //         theme,
+    //         256,
+    //         'png',
+    //         {'style': style}
+    //     );
+    //     this.map.setBaseLayer(layer);
+    // }
+    // shouldComponentUpdate(props, state) {
+    //     this.changeTheme(props.theme, props.style);
+    //     return false;
+    // }
 
     render() {
         return (
