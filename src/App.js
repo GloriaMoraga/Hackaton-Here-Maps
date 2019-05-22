@@ -41,8 +41,7 @@ class App extends Component {
         return (
          
             <div className="App">
-            <Header />
-            {console.log(this.state.lng)}   
+            <Header /> 
             <Map
                 lat= { this.state.lat }
                 lng= { this.state.lng }
