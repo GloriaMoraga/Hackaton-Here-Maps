@@ -7,7 +7,6 @@ class App extends Component {
         super(props);
 
         this.state = {
-            theme: 'normal.day',
             lat: 52.530974,
             lng: 13.384944, // Null Island
             error: null,
@@ -20,8 +19,6 @@ class App extends Component {
   // a latitude and longitude for the browser
 
   componentDidMount() {
-      
-   
       navigator.geolocation.getCurrentPosition(
         (position) => {
           this.setState({
@@ -34,7 +31,6 @@ class App extends Component {
           {error: error.message}
         )
       );
-    
 }
 
 
@@ -43,16 +39,13 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Map
-                    app_id="GkUohGm3fVKilW9qMHcb"
-                    app_code="TXWMDz0kPxL0ZkRWCj-u5w"
-                    lat= { this.state.lat }
-                    lng= { this.state.lng }
-                    zoom="12"
-                    theme={ this.state.theme }
-                />
-               
-                
+            {console.log(this.state.lng)}   
+            <Map
+                lat= { this.state.lat }
+                lng= { this.state.lng }
+                zoom="12"
+                theme="normal.day"
+            />)
             </div>
         );
     }
