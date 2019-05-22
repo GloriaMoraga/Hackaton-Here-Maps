@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Map from './components/Mapas.js';
+import Map from './components/mapas/Mapas.js';
+import Header from './components/header/Header.js';
 
 
 class App extends Component {
@@ -42,7 +43,9 @@ class App extends Component {
 
     render() {
         return (
+         
             <div className="App">
+            <Header/>
                 <Map
                     app_id="GkUohGm3fVKilW9qMHcb"
                     app_code="TXWMDz0kPxL0ZkRWCj-u5w"
