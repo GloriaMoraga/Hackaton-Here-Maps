@@ -11,8 +11,9 @@ class Map extends Component {
         this.state = {
             app_id: "GkUohGm3fVKilW9qMHcb",
             app_code: "TXWMDz0kPxL0ZkRWCj-u5w",
-            theme: props.theme,
-            style: props.style,
+            useHTTPS: true,
+            // theme: props.theme,
+            // style: props.style,
         }
     }
 
