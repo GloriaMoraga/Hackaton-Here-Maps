@@ -1,0 +1,80 @@
+.loginPage{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.397);
+    background-image: url(https://github.com/Milexys/Hackaton-Here-Maps/blob/master/images/Costanera_Center_5-mqz78ancr8f1t9l6iikv60w6yy2tuyim1hwe48ioq8.jpg?raw=true);
+    
+    font-family: 'Abel', sans-serif;
+}
+.base{
+    position: relative;
+    top: 10%;
+    width: 50%;
+    height: 80vh;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.158);
+}
+.base .divTitle{
+    width: 100%;
+    text-align: center;
+}
+.divTitle .title {
+    color: white;
+    padding: 80px 0 30px 0;
+    letter-spacing: 2px;
+}
+.base .divForm{
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+.base .divForm input{
+    background-color: rgba(255, 255, 255, 0.473);
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin-bottom: 10px;
+}
+.divBtn{
+    padding: 40px 10px;
+    margin-left: 10%; 
+}
+.signIn{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(25, 82, 180);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    border-radius: 20px;
+}
+.iconos{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    padding: 20px 0;
+}
+.frame-icon{
+    width: 32px;
+    height: 32px;
+    border: 4px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    justify-content: center;
+    margin: 0 12px; 
+}
+.fab{
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 414px){
+    .base{
+        width: 90%;
+    }
+} 
