@@ -50,7 +50,7 @@ class LoginPage extends Component {
                             <label>CONTRASEÑA</label>
                             <input type="password" id="password" placeholder="****" />
                             <div className="divBtn">
-                                <Button type="submit" onClick={this.handleLogin} className="signIn">INGRESA</Button>
+                               <Link to='/dashboard'> <Button type="submit"  className="signIn">INGRESA</Button></Link>
                             </div>
                         </form>
                     </div>

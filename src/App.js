@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import LoginPage from './components/LoginPage/LoginPage'
-import HomePage from './components/HomePage/HomePage'
+import LoginPage from './components/LoginPage/LoginPage';
+import HomePage from './components/HomePage/HomePage';
 import Map from './components/mapas/Mapas.js';
 import Header from './components/header/Header.js';
 import Footer from './components/footer/Footer.js';
 import Firebase from './firebaseConfig';
-import Dashboard from './components/Dashboard/Dashboard'
+import Dashboard from './components/Dashboard/Dashboard';
+
 
 
 class App extends Component {
@@ -20,22 +21,6 @@ class App extends Component {
       user: {},
     }
 
-  }
-
-  componentDidMount() {
-    this.authListener();
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        this.setState({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          error: null,
-        });
-      },
-      (error) => this.setState(
-        { error: error.message }
-      )
-    );
   }
 
   authListener(){
@@ -65,3 +50,25 @@ class App extends Component {
 
 
 export default App;
+
+
+
+
+// render() {
+//   return (
+   
+//       <div className="App">
+//       <Header /> 
+//         <Map
+//           lat= { this.state.lat }
+//           lng= { this.state.lng }
+//           zoom="15"
+//           theme="normal.day"
+//         />
+//       <Footer />
+  
+
+//       </div>
+//     )
+
+// }
