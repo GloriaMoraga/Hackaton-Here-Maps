@@ -1,9 +1,37 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Firebase from '../../firebaseConfig'
+import { Link } from 'react-router-dom';
 import './loginPage.css';
 
 class LoginPage extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            email: '',
+            password: '',
+            user: {},
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleLogin = this.handleLogin.bind(this)
+    }
+    handleChange(e) {
+        this.setState({ 
+            [e.target.id]: e.target.value
+        });
+    }
+
+    handleLogin(e){
+        e.preventDefault();
+        Firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+        .then((user) =>{
+            console.log(user)
+        })
+        .catch((error) =>{
+            console.log(error);
+         });
+    }  
+
     render() {
         return (
             <div className="loginPage">
@@ -16,14 +44,13 @@ class LoginPage extends Component {
                         <p>Crea tu cuenta para comenzar. Luego puedes participar de tu comunidad</p>
                     </div>
                     <div className="divForm">
-                        <form>
+                        <form onChange={this.handleChange}>
                             <label>EMAIL</label>
-                            <input type="text" placeholder="Email" />
+                            <input type="text" id="email" placeholder="Email" />
                             <label>CONTRASEÑA</label>
-                            <input type="password"  placeholder="****" />
+                            <input type="password" id="password" placeholder="****" />
                             <div className="divBtn">
-
-                            <Link to="/App"> <Button className="signIn">INGRESA</Button></Link>
+                               <Link to='/dashboard'> <Button type="submit"  className="signIn">INGRESA</Button></Link>
                             </div>
                         </form>
                     </div>
