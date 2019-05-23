@@ -53,7 +53,11 @@ class App extends Component {
     return (
       <div className="App">
 
-        {this.state.user ? (<Dashboard/>): (<LoginPage/>)}
+        <Map
+        lat={this.state.lat}
+        lng={this.state.lng}
+        zoom='12'
+        />
       </div>
     );
   }   
