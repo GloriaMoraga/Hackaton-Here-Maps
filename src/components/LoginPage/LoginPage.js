@@ -10,6 +10,7 @@ class LoginPage extends Component {
         this.state = {
             email: '',
             password: '',
+            user: {},
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleLogin = this.handleLogin.bind(this)
@@ -19,6 +20,7 @@ class LoginPage extends Component {
             [e.target.id]: e.target.value
         });
     }
+
     handleLogin(e){
         e.preventDefault();
         Firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
@@ -28,8 +30,8 @@ class LoginPage extends Component {
         .catch((error) =>{
             console.log(error);
          });
-   
     }  
+
     render() {
         return (
             <div className="loginPage">

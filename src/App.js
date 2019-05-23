@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import Map from './components/mapas/Mapas.js';
-// import Header from './components/header/Header.js';
 import LoginPage from './components/LoginPage/LoginPage'
 import HomePage from './components/HomePage/HomePage'
+import Map from './components/mapas/Mapas.js';
+import Header from './components/header/Header.js';
+import Footer from './components/footer/Footer.js';
+import Firebase from './firebaseConfig';
+import Dashboard from './components/Dashboard/Dashboard'
+
 
 class App extends Component {
   constructor(props) {
@@ -13,15 +17,13 @@ class App extends Component {
       lat: 52.530974,
       lng: 13.384944, // Null Island
       error: null,
+      user: {},
     }
 
   }
 
-  // When the component is rendered to the DOM for the first time
-  // such as at page load we call the Geolocation API to determine
-  // a latitude and longitude for the browser
-
   componentDidMount() {
+    this.authListener();
     navigator.geolocation.getCurrentPosition(
       (position) => {
         this.setState({
@@ -36,29 +38,26 @@ class App extends Component {
     );
   }
 
-
-
+  authListener(){
+    Firebase.auth().onAuthStateChanged((user)=>{
+      if(user){
+        this.setState({ user });
+        console.log(user)
+      } else {
+        this.setState({ user:null });
+      }
+    });
+   }
 
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
-        <Switch>
-          <Route exact path='/' component={HomePage}/>
-          <Route path='/signIn' component={LoginPage}/>
-        </Switch>
-          
-          {/* <Header />  */}
-          {/* <Map
-                lat= { this.state.lat }
-                lng= { this.state.lng }
-                zoom="12"
-                theme="normal.day"
-            />) */}
-        </div>
-      </BrowserRouter>
+      <div className="App">
+
+        {this.state.user ? (<Dashboard/>): (<LoginPage/>)}
+      </div>
     );
-  }
-}
+  }   
+    }
+
 
 export default App;
