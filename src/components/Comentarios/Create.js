@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import firebase from '../../';
+import firebase from '../../firebaseConfig.js';
 import { Link } from 'react-router-dom';
 import { Container, Col, Row} from 'react-bootstrap';
 import './Create.css';
-import Navbar from '../../component-navbar/Navbar';
+import Footer from '../footer/Footer';
 
 class Create extends Component {
 
@@ -37,7 +37,7 @@ class Create extends Component {
         description: '',
         author: ''
       });
-      this.props.history.push("/todo")
+      this.props.history.push("/dashboard")
     })
     .catch((error) => {
       console.error("Error adding document: ", error);
@@ -78,7 +78,7 @@ class Create extends Component {
           </Row>
           <h4><Link to="/todo" class="btn btn-primary">Volver a las Tareas</Link></h4>
         </Container>
-        <Navbar />
+        <Footer />
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import firebase from '../../components-firebase/Fire';
+import firebase from '../../firebaseConfig.js';
 import { Link } from 'react-router-dom';
 import { Container, Col, Row} from 'react-bootstrap';
-import Navbar from '../../component-navbar/Navbar';
+import Footer from '../footer/Footer';
 
 class Edit extends Component {
 
@@ -94,7 +94,7 @@ class Edit extends Component {
         </Row>
         <h4><Link to={`/show/${this.state.key}`} class="btn btn-primary">volver a las tareas</Link></h4>
         </Container>
-     <Navbar />
+     <Footer />
       </div>
       );
     }
