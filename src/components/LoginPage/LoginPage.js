@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import './loginPage.css';
 
 class LoginPage extends Component {
@@ -7,28 +8,26 @@ class LoginPage extends Component {
         return (
             <div className="loginPage">
                 <div className="base">
+                    <div className="logo">
+                        <img src="https://github.com/Milexys/Hackaton-Here-Maps/blob/master/images/Group.png?raw=true" alt="logo vecinapp"/>
+                    </div>
                     <div className="divTitle">
-                        <h1 className="title">TravelSafe Chile</h1>
+                        <h1>Hola</h1>
+                        <p>Crea tu cuenta para comenzar. Luego puedes participar de tu comunidad</p>
                     </div>
                     <div className="divForm">
                         <form>
-                            <input type="text" className="inputs" placeholder="Email" />
-                            <input type="password" className="inputs" placeholder="Password" />
+                            <label>EMAIL</label>
+                            <input type="text" placeholder="Email" />
+                            <label>CONTRASEÑA</label>
+                            <input type="password"  placeholder="****" />
                             <div className="divBtn">
-                                <Button className="signIn">Sign In</Button>
+                                <Button className="signIn">INGRESA</Button>
                             </div>
                         </form>
-                        <div className="iconos">
-                            <div className="frame-icon">
-                                <i className='fab fa-google-plus-g' style={{ fontSize: '24px' }}></i>
-                            </div>
-                            <div className="frame-icon">
-                                <i className='fab fa-facebook-f' style={{ fontSize: '24px', marginLeft: '6px' }}></i>
-                            </div>
-                            <div className="frame-icon">
-                                <i className='fab fa-twitter' style={{ fontSize: '24px' }}></i>
-                            </div>
-                        </div>
+                    </div>
+                    <div className="linkRegister">
+                    <p>¿No tienes una cuenta? <Link to='/register'style={{color:'rgb(25, 82, 180)'}}> Registrate</Link></p>
                     </div>
                 </div>
             </div>
