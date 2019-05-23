@@ -4,6 +4,7 @@ import Header from './components/header/Header.js';
 import Footer from './components/footer/Footer.js';
 
 
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -33,6 +34,7 @@ class App extends Component {
                 theme="normal.day"
               />
             <Footer />
+        
 
             </div>
           )

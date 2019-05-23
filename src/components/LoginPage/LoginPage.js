@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import './loginPage.css';
 
@@ -15,7 +16,7 @@ class LoginPage extends Component {
                             <input type="text" className="inputs" placeholder="Email" />
                             <input type="password" className="inputs" placeholder="Password" />
                             <div className="divBtn">
-                                <Button className="signIn">Sign In</Button>
+                            <Link to="/App"> <Button className="signIn">Sign In</Button></Link>
                             </div>
                         </form>
                         <div className="iconos">
