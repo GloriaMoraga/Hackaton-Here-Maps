@@ -7,3 +7,15 @@
    
    
    }
+
+ .logo-header{
+     display:flex;
+     justify-content: center;
+     padding-top: 10px;
+   
+ } 
+ 
+ .logo{
+    width: 230px;
+    height: 60px;
+ }
