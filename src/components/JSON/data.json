@@ -2,7 +2,8 @@
     "data": [{
         "ID": "01",
         "Usuario": "Marco Rodríguez",
-        "Imagen": "https://cdn131.picsart.com/261801660010212.png?r1024x1024",
+        "Shape": "https://cdn131.picsart.com/261801660010212.png?r1024x1024",
+        "Imagen": "http://signovial.pe/blog/wp-content/uploads/2017/08/PORTADA-ARTI%CC%81CULO-SAN-ISIDRO.jpg",
         "Dirección": "Avenida Paz 901, comuna Recoleta",
         "Latitud": -33.421032,
         "Longitud": -70.650681,
@@ -11,7 +12,8 @@
     {
         "ID": "02",
         "Usuario": "Lorena Nieves",
-        "Imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/LACMTA_Circle_Gold_Line.svg/240px-LACMTA_Circle_Gold_Line.svg.png",
+        "Shape": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/LACMTA_Circle_Gold_Line.svg/240px-LACMTA_Circle_Gold_Line.svg.png",
+        "Imagen": "http://www.diarioelcentro.cl/imagenes/noticias/poca-iluminacion-en-la-plaza-abate-molina-preocupa-a-los-vecinos.jpg",
         "Dirección": "Calle puma 1180, comuna Recoleta",
         "Latitud": -33.419187,
         "Longitud": -70.641787,
@@ -20,7 +22,8 @@
     {
         "ID": "03",
         "Usuario": "Carolina Herrera",
-        "Imagen": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg",
+        "Shape": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg",
+        "Imagen": "http://www.cobquecura.cl/wp-content/uploads/2019/01/1acb0cf9-a55b-4755-b0b7-a4485a6d6491-960x570.jpg",
         "Dirección": "Avenida independencia 684, comuna Independencia",
         "Latitud": -33.423072,
         "Longitud": -70.655253,
@@ -29,7 +32,8 @@
     {
         "ID": "04",
         "Usuario": "Coco Channel",
-        "Imagen": "http://www.stickpng.com/assets/images/58afdad6829958a978a4a693.png",
+        "Shape": "http://www.stickpng.com/assets/images/58afdad6829958a978a4a693.png",
+        "Imagen": "https://cadenaser.com/emisora/imagenes/2019/02/05/album/1549392183_119730_1549392340_album_normal.jpg",
         "Dirección": "Prof. Zañartu 1185, comuna Independencia",
         "Latitud": -33.417645,
         "Longitud": -70.656147,
@@ -38,7 +42,8 @@
     {
         "ID": "05",
         "Usuario": "Louis Vuitton",
-        "Imagen": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg",
+        "Shape": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg",
+        "Imagen": "https://www.elsiglodetorreon.com.mx/m/i/2018/01/1021693.jpeg",
         "Dirección": "Avenida Independencia 1918, comuna Independencia",
         "Latitud": -33.409386,
         "Longitud":  -70.659954,
