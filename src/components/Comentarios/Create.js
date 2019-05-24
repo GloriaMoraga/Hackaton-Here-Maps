@@ -48,7 +48,7 @@ class Create extends Component {
   }
 
   render() {
-    const { title, description, author, url } = this.state;
+    const { title, author, description,  url } = this.state;
     return (
       <div>
    
@@ -71,31 +71,35 @@ class Create extends Component {
               <div className="form-group">
                  <label for="title">Foto</label>  
                  <input className="form-control" type="file" value={url} onChange={this.handleChange}/>
-                 <button onClick={this.handleUpload}>Upload</button>
+                 
               </div>
               <div className="form-group">
                 <label for="title">Titulo</label>
-                <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
+                <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} placeholder="Titulo" />
               </div>
               <div className="form-group">
                 <label for="description">Descripción</label>
-                <textArea className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="3">{description}</textArea>
+                <textArea className="form-control" name="description" onChange={this.onChange} placeholder="Descripción" cols="80" rows="3">{description}</textArea>
               </div>
               <div className="form-group">
                 <label for="author">Vecin@:</label>
-                <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
+                <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="Nombre" />
               </div>
 
               <div className="form-group">
                 <label for="author">Ubicación</label>
-                <input type="text" className="form-control" name="author" placeholder="Author" />
+                <input type="text" className="form-control" name="author" placeholder="ubicacion" />
               </div>
-             <div className="form-group"><button type="submit" className="btn btn-success">REPORTAR</button></div> 
+             <div className="btn-sucess">
+               <button  onClick={this.handleUpload} type="submit" className="btn btn-primary">REPORTAR</button>
+               </div> 
+              <div className="volver"> <h6><Link to="/dashboard">Volver a Reportes</Link></h6> </div>
+
             </form>
             </Col>
           </Row>
 
-          <h4><Link to="/dashboard" className="btn btn-primary">Volver a Reportes</Link></h4>
+          
 
         </Container>
   
