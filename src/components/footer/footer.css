@@ -6,12 +6,10 @@
  top:90%;
  background-color: #ffffff;
 }
-.footer div{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
+.nombre-filtrado{
+  width: 100%;
+}
 .footer label{
     padding: 5px 0px 0px 10px; 
     font-size: 12px;
@@ -22,3 +20,11 @@
   font-size: 24px;
   margin-right: 10px;
 }
+
+.btn-up{
+  display:flex;
+  justify-content: start;
+  width: 100%;
+  padding-left: 10px;
+}
+

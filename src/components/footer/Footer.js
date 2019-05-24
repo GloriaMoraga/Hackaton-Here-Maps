@@ -6,13 +6,15 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <div><label>FILTRAR POR</label></div>
+            <div className="nombre-filtrado"><label>FILTRAR POR</label></div>
+        <div className="btn-up">   
             <ButtonToolbar>
                 {['up'].map(direction => (
                     <DropdownButton
+                        size="m"
                         drop={direction}
                         variant="secondary"
-                        title={`Filtro`}
+                        title={`Lugares Reportados`}
                         id={`dropdown-button-drop-up`}
                         key={direction}
                     >
@@ -28,7 +30,7 @@ const Footer = () => {
                     </DropdownButton>
                 ))}
             </ButtonToolbar>
-
+            </div> 
         </div>
 
     )
