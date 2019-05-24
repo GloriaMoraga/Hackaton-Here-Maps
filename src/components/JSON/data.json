@@ -1,0 +1,46 @@
+{
+    "data": [{
+        "ID": "01",
+        "Usuario": "Marco Rodríguez",
+        "Imagen": "foto",
+        "Dirección": "Avenida Paz 901, comuna Recoleta",
+        "Latitud": -33.421032,
+        "Longitud": -70.650681,
+        "Reporte": "Apartir de este punto se termina la ciclovía"
+    },
+    {
+        "ID": "02",
+        "Usuario": "Lorena Nieves",
+        "Imagen": "foto",
+        "Dirección": "Calle puma 1180, comuna Recoleta",
+        "Latitud": -33.419187,
+        "Longitud": -70.641787,
+        "Reporte": "Hace falta que le coloquen mas iluminación a esta calle"
+    },
+    {
+        "ID": "03",
+        "Usuario": "Carolina Herrera",
+        "Imagen": "foto",
+        "Dirección": "Avenida independencia 684, comuna Independencia",
+        "Latitud": -33.423072,
+        "Longitud": -70.655253,
+        "Reporte": "Esta avenida es muy transitada y por eso hace falta un paso peatonal en esta esquina"
+    },
+    {
+        "ID": "04",
+        "Usuario": "Coco Channel",
+        "Imagen": "foto",
+        "Dirección": "Prof. Zañartu 1185, comuna Independencia",
+        "Latitud": -33.417645,
+        "Longitud": -70.656147,
+        "Reporte": "El semáforo tiene 3 dias averiado"
+    },
+    {
+        "ID": "05",
+        "Usuario": "Louis Vuitton",
+        "Dirección": "Avenida Independencia 1918, comuna Independencia",
+        "Latitud": -33.409386,
+        "Longitud":  -70.659954,
+        "Reporte": "La avenida se encuentra en muy mal estado"
+    }
+]}

@@ -68,7 +68,7 @@ class Create extends Component {
                 <label for="description">Description:</label>
                 <textArea className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="3">{description}</textArea>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="author">Author:</label>
                 <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
               </div>
@@ -76,7 +76,9 @@ class Create extends Component {
             </form>
             </Col>
           </Row>
+
           <h4><Link to="/dashboard" className="btn btn-primary">Volver a Reportes</Link></h4>
+
         </Container>
         <Footer />
       </div>

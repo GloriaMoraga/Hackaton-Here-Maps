@@ -44,8 +44,7 @@ render() {
           theme="normal.day"
         />
       <Footer />
-  
-
+ 
       </div>
     )
 

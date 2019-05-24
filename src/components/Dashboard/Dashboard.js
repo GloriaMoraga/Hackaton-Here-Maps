@@ -34,7 +34,7 @@ class Dashboard extends Component {
     });
     this.setState({
       boards
-   });
+    });
   }
 
   componentDidMount() {
@@ -43,6 +43,7 @@ class Dashboard extends Component {
 
   render() {
     return (
+
  <div>
         <Header />
        
@@ -88,16 +89,15 @@ class Dashboard extends Component {
            </Col>
 
 
-           
-          
+
 
 
           </Row>
-         </Container> 
-      
+        </Container>
 
 
- </div>
+
+      </div>
     );
   }
 }
