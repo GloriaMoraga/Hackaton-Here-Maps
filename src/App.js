@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Map from './components/mapas/Mapas.js';
 import Firebase from './firebaseConfig';
+import Header from './components/header/Header.js';
+import Footer from './components/footer/Footer.js';
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Map
         app_id={this.state.app_id}
         app_code={this.state.app_code}
@@ -55,6 +58,7 @@ class App extends Component {
         zoom='12'
         theme="normal.day"
         />
+        <Footer />
       </div>
     );
   }   

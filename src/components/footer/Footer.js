@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonToolbar, DropdownButton, Dropdown } from 'react-bootstrap';
+import { DropdownButton, Dropdown } from 'react-bootstrap';
 import './footer.css';
 
 const Footer = () => {
