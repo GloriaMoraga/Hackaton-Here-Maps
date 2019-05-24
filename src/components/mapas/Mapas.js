@@ -67,12 +67,13 @@ class Map extends Component {
 
     showMarkerData(){
         this.state.data.forEach(element => {
-            let icon = new window.H.map.Icon(element.Imagen, { size: new window.H.math.Size(20, 28) }, { anchor: new window.H.math.Point(8, 28) });
+            let icon = new window.H.map.Icon(element.Shape, { size: new window.H.math.Size(20, 28) }, { anchor: new window.H.math.Point(8, 28) });
             let marker = new window.H.map.Marker({ lat: element.Latitud, lng: element.Longitud }, { icon: icon })
             this.map.addObject(marker);
             marker.addEventListener("tap", (evt) => {
                 let info = new window.H.ui.InfoBubble(evt.target.getPosition(), {
                     content: `<h5>${element.Usuario}</h5>
+                                <img src=${element.Imagen} class="imagen"/>
                             <h6>${element.Reporte}</h6>`
                 })
                 this.state.ui.addBubble(info);
