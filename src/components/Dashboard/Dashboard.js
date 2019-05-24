@@ -29,7 +29,7 @@ class Dashboard extends Component {
         title,
         description,
         author,
-        url
+        url,
       });
     });
     this.setState({
