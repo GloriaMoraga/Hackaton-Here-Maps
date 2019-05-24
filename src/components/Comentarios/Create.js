@@ -61,6 +61,8 @@ class Create extends Component {
             
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
+              <input type="file" onChange={this.handleChange}/>
+        <button onClick={this.handleUpload}>Upload</button>
                 <label for="title">Title:</label>
                 <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
               </div>
