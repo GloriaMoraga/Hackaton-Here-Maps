@@ -76,7 +76,9 @@ class Create extends Component {
             </form>
             </Col>
           </Row>
-          <h4><Link to="/todo" className="btn btn-primary">Volver a las Tareas</Link></h4>
+
+          <h4><Link to="/dashboard" className="btn btn-primary">Volver a Reportes</Link></h4>
+
         </Container>
         <Footer />
       </div>

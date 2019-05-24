@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import LoginPage from './components/LoginPage/LoginPage';
-import HomePage from './components/HomePage/HomePage';
 import Map from './components/mapas/Mapas.js';
 import Header from './components/header/Header.js';
 import Footer from './components/footer/Footer.js';
@@ -34,18 +32,23 @@ class App extends Component {
     });
    }
 
-  render() {
-    return (
+render() {
+  return (
+   
       <div className="App">
-
+      <Header /> 
         <Map
-        lat={this.state.lat}
-        lng={this.state.lng}
-        zoom='12'
+          lat= { this.state.lat }
+          lng= { this.state.lng }
+          zoom="15"
+          theme="normal.day"
         />
+      <Footer />
+ 
       </div>
-    );
-  }   
+    )
+
+}  
     }
 
 
@@ -54,21 +57,3 @@ export default App;
 
 
 
-// render() {
-//   return (
-   
-//       <div className="App">
-//       <Header /> 
-//         <Map
-//           lat= { this.state.lat }
-//           lng= { this.state.lng }
-//           zoom="15"
-//           theme="normal.day"
-//         />
-//       <Footer />
-  
-
-//       </div>
-//     )
-
-// }

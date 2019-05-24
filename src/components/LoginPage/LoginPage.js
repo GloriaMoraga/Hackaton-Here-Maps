@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Firebase from '../../firebaseConfig'
 import { Link } from 'react-router-dom';
 import './loginPage.css';
+import iconblue from '../../images/logoblue.png';
 
 class LoginPage extends Component {
     constructor(props){
@@ -36,12 +37,12 @@ class LoginPage extends Component {
         return (
             <div className="loginPage">
                 <div className="base">
-                    <div className="logo">
-                        <img src="https://github.com/Milexys/Hackaton-Here-Maps/blob/master/images/Group.png?raw=true" alt="logo vecinapp"/>
+                    <div className="logo-login">
+                        <img src={iconblue} alt="logo vecinapp"/>
                     </div>
                     <div className="divTitle">
                         <h1>Hola</h1>
-                        <p>Crea tu cuenta para comenzar. Luego puedes participar de tu comunidad</p>
+                        <p>Crea tu cuenta para comenzar. <br/>Luego puedes participar de tu comunidad</p>
                     </div>
                     <div className="divForm">
                         <form onChange={this.handleChange}>

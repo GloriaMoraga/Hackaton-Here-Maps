@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../../firebaseConfig.js';
 import { Link } from 'react-router-dom';
-import { Container, Col, Row} from 'react-bootstrap';
+import { Container, Row} from 'react-bootstrap';
 import Footer from '../footer/Footer';
 
 class Edit extends Component {
