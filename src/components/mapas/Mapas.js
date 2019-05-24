@@ -67,7 +67,7 @@ class Map extends Component {
 
     showMarkerData(){
         this.state.data.forEach(element => {
-            let icon = new window.H.map.Icon('http://www.stickpng.com/assets/images/58afdad6829958a978a4a693.png', { size: new window.H.math.Size(20, 28) }, { anchor: new window.H.math.Point(8, 28) });
+            let icon = new window.H.map.Icon(element.Imagen, { size: new window.H.math.Size(20, 28) }, { anchor: new window.H.math.Point(8, 28) });
             let marker = new window.H.map.Marker({ lat: element.Latitud, lng: element.Longitud }, { icon: icon })
             this.map.addObject(marker);
             marker.addEventListener("tap", (evt) => {
