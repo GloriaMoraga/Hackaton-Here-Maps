@@ -1,0 +1,17 @@
+
+
+.box-titulo{
+    position: absolute;
+width: 375px;
+height: 60px;
+left: 0px;
+top: 63px;
+
+background: linear-gradient(198.23deg, #F66EB4 0%, #FEB665 100%);
+border-radius: 2px;
+}
+
+
+.box-titulo h3{
+    font-family: "Actor", sans-serif;
+}

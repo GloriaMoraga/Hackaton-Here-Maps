@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './dashboard.css';
 import Firebase from '../../firebaseConfig.js';
 import { Container, Col, Row, Card, Button } from 'react-bootstrap';
-import testPrueba from '../../images/testimage2.png';
 import btnuno from '../../images/botonuno.png';
 import btndos from '../../images/botondos.png';
 import Header from '../header/Header.js';
@@ -23,13 +22,14 @@ class Dashboard extends Component {
   onCollectionUpdate = (querySnapshot) => {
     const boards = [];
     querySnapshot.forEach((doc) => {
-      const { title, description, author } = doc.data();
+      const { title, description, author, url } = doc.data();
       boards.push({
         key: doc.id,
         doc, // DocumentSnapshot
         title,
         description,
         author,
+        url
       });
     });
     this.setState({
@@ -71,7 +71,7 @@ class Dashboard extends Component {
 
                 <div key={i} className="card-box">
                   <Card className="card-box mt-2 mb-3" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={testPrueba} />
+                    <Card.Img variant="top" src={board.url} />
                     <Card.Body>
                       <Card.Title>{board.title}</Card.Title>
                       <Card.Text>

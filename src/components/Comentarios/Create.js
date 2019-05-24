@@ -3,7 +3,7 @@ import firebase from '../../firebaseConfig.js';
 import { Link } from 'react-router-dom';
 import { Container, Col, Row} from 'react-bootstrap';
 import './Create.css';
-import Footer from '../footer/Footer';
+import Header from '../header/Header';
 
 class Create extends Component {
 
@@ -13,7 +13,8 @@ class Create extends Component {
     this.state = {
       title: '',
       description: '',
-      author: ''
+      author: '',
+      url: ''
     };
   }
   onChange = (e) => {
@@ -25,17 +26,19 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, description, author } = this.state;
+    const { title, description, author , url} = this.state;
 
     this.ref.add({
       title,
       description,
-      author
+      author,
+      url
     }).then((docRef) => {
       this.setState({
         title: '',
         description: '',
-        author: ''
+        author: '',
+        url : ''
       });
       this.props.history.push("/dashboard")
     })
@@ -45,15 +48,14 @@ class Create extends Component {
   }
 
   render() {
-    const { title, description, author } = this.state;
+    const { title, description, author, url } = this.state;
     return (
       <div>
+        <Header />
         <Container>
           <Row>
-              <Col xs={12} md={12} lg={12} >
-              <h3 className="text-center mt-2">
-              
-            </h3>
+              <Col className="box-titulo" xs={12} md={12} lg={12} >
+              <h3>REPORTAR INCIDENCIA</h3>
             </Col>
             
         
@@ -61,7 +63,7 @@ class Create extends Component {
             
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-              <input type="file" onChange={this.handleChange}/>
+              <input type="file" value={url} onChange={this.handleChange}/>
         <button onClick={this.handleUpload}>Upload</button>
                 <label for="title">Title:</label>
                 <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
@@ -82,7 +84,7 @@ class Create extends Component {
           <h4><Link to="/dashboard" className="btn btn-primary">Volver a Reportes</Link></h4>
 
         </Container>
-        <Footer />
+  
       </div>
     );
   }
