@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './dashboard.css';
 import Firebase from '../../firebaseConfig.js';
-import { Container, Col, Row} from 'react-bootstrap';
-// import oniprofile from '../img/profile.png';
-// import stevenprofile from '../img/profile2.png';
+import { Container, Col, Row, Card, Button} from 'react-bootstrap';
+import testPrueba from '../../images/testimage2.png';
+import btnuno from '../../images/botonuno.png';
+import btndos from '../../images/botondos.png';
 import Header from '../header/Header.js';
+
 
 
 class Dashboard extends Component {
@@ -42,31 +44,43 @@ class Dashboard extends Component {
   render() {
     return (
  <div>
-
-      <Header />
-
+        <Header />
+       
         <Container >  
-        <Row>   
-
-        <Col xs={12} md={12} lg={12} className="addWork mt-3" >
-           <div className="content-add">
-           <Link to="/create"><i class="fas fa-plus-circle icon-add"></i></Link>
+         <Row>    
+           <Col xs={12} md={12} lg={12} className="addWork">
+           <div className="content-add-uno">
+               <Link to="/create"><img src={btnuno} alt="btnuno"/>
+               </Link>
            </div>
+           
+           <div className="content-add-dos">
+               <Link to="/noseaun"><img src={btndos} alt="btndos"/>
+               </Link>
+           </div>
+           
            </Col>
            
-          <Col  xs={12} md={12} lg={12} className="tareas">
-           <h4 className="text-center mt-2 mb-5">Tareas por hacer</h4>
+           
+           
+       
 
+          <Col  xs={12} md={12} lg={12} className="tareas">
            {this.state.boards.map(board =>
 
-           <div>
-           <ul class="list-group">
-             <li class="list-group-item d-flex justify-content-between align-items-center">
-             <input type="checkbox" aria-label="Checkbox for following text input"/> 
-             <Link to={`/show/${board.key}`}>{board.title}</Link> 
-             <span class="badge badge-primary badge-pill">{board.author}</span>
-             </li>
-             </ul>
+           <div className="card-box">
+           <Card className="card-box mt-2 mb-3" style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={testPrueba} />
+            <Card.Body>
+               <Card.Title>{board.title}</Card.Title>
+            <Card.Text>
+            {board.description}
+            <Link to={`/show/${board.key}`}>
+             <span class="badge badge-primary badge-pill">{board.author}</span></Link> 
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+            </Card>
           </div>
            )}
              

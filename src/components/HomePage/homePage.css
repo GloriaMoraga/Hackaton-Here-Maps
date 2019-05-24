@@ -17,3 +17,8 @@
 .titleHome h1{
     color: white;
 }
+
+.img-logo-first{
+    display:flex;
+    justify-content: center;
+}
