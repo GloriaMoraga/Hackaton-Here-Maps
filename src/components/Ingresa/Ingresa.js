@@ -1,98 +1,16 @@
 import React, { Component } from 'react';
-import firebase from '../../firebaseConfig.js';
+
 import { Link } from 'react-router-dom';
 import { Container, Col, Row} from 'react-bootstrap';
-import './Create.css';
+import './ingresa.css';
 import LogoHeader from '../../images/vecindap.png';
-import {storage} from '../../firebaseConfig.js';
 
 
 
 
-class Create extends Component {
 
-  constructor() {
-    super();
-    this.ref = firebase.firestore().collection('boards');
-   
-    this.state = {
-      image: null,
-      title: '',
-      description: '',
-      author: '',
-      url: '',
-      tipo:''
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleUpload = this.handleUpload.bind(this);
-  }
-  handleChange = e => {
-    if (e.target.files[0]) {
-      const image = e.target.files[0];
-      this.setState(() => ({image}));
-    }
-    
-  }
-  handleUpload = () => {
-      const {image} = this.state;
-      const uploadTask = storage.ref(`images/${image.name}`).put(image);
-      uploadTask.on('state_changed', 
-      (snapshot) => {
-        // progrss function ....
-        
-      }, 
-      (error) => {
-           // error function ....
-        console.log(error);
-      }, 
-    () => {
-        // complete function ....
-        storage.ref('images').child(image.name).getDownloadURL().then(url => {
-       
-            this.setState({url });
-           console.log(url)
+class Ingresa extends Component {
 
-    
-        })
-        
-    });
-    
-  }
-
-  onChange = (e) => {
-    const state = this.state
-    state[e.target.name] = e.target.value;
-    this.setState(state);
-    
-  }
-
-  onSubmit = (e) => {
-    e.preventDefault();
-
-    const { title, description, author , url, tipo} = this.state;
- 
-    this.ref.add({
-      title,
-      description,
-      author,
-      url, 
-      tipo
-    }).then((docRef) => {
-      this.setState({
-        
-        title: '',
-        description: '',
-        author: '',
-          tipo: '',
-          url: ''
-      });
-      
-      this.props.history.push("/dashboard")
-    })
-    .catch((error) => {
-      console.error("Error adding document: ", error);
-    });
-  }
   
   
   render() {
@@ -108,9 +26,9 @@ class Create extends Component {
               </div>
               
             </Col>
-            <Col className="box-titulo" xs={12} md={12} lg={12} >
+            <Col className="box-titulo-ingresa" xs={12} md={12} lg={12} >
 
-              <h4 className="titulo-form">REPORTAR INCIDENCIA</h4>
+              <h4 className="titulo-form-ingresa">REPORTAR INCIDENCIA</h4>
             </Col>
             
         
@@ -127,7 +45,7 @@ class Create extends Component {
               </div>
               <div className="form-group">
                 <label >Titulo</label>
-                <input type="text" className="form-control" name="title" value={this.state.title} onChange={this.onChange} placeholder="Titulo" />
+                <input type="text" className="form-control" name="title"  onChange={this.onChange} placeholder="Titulo" />
               </div>
               <div className="form-group">
                 <label >Descripción</label>
@@ -137,7 +55,7 @@ class Create extends Component {
                 <label >
                   Tipo de Incidente
                 </label>
-                <select className="form-control" value={this.state.tipo}  onChange={this.onChange} id="exampleFormControlSelect1">
+                <select className="form-control"   onChange={this.onChange} id="exampleFormControlSelect1">
                   <option value ="<i className='fas fa-circle' style={{ color: 'green' }}></i>">Aceras y calzadas</option>
                   <option value="<i className='fas fa-circle' style={{ color: '#FFAA00' }}></i>Alumbrado">Alumbrado</option>
                   <option value="<i className='fas fa-circle' style={{ color: '#AA5DDB' }}></i>Mobiliario urbano">Mobiliario urbano</option>
@@ -147,7 +65,7 @@ class Create extends Component {
               </div>
               <div className="form-group">
                 <label >Vecin@:</label>
-                <input type="text" className="form-control" name="author" value={this.state.author} onChange={this.onChange} placeholder="Nombre" />
+                <input type="text" className="form-control" name="author"  onChange={this.onChange} placeholder="Nombre" />
               </div>
 
 
@@ -173,4 +91,4 @@ class Create extends Component {
   }
 }
 
-export default Create;
+export default Ingresa;

@@ -3,7 +3,6 @@
 .box-titulo{
 width: 100%;
 height: 60px;
-margin-top: 10px;
 margin-bottom: 10px;
 background: linear-gradient(198.23deg, #F66EB4 0%, #FEB665 100%);
 border-radius: 2px;
@@ -34,4 +33,13 @@ align-items: center;
 .volver{
     text-align: center;
     color: #666666;
+}
+
+.back-comentarios{
+background: linear-gradient(147.21deg, #EEECFF -8.91%, #FFFFFF 99.17%);
+}
+
+.back-logo{
+    background: #ffffff;
+    padding-bottom: 10px;
 }

@@ -1,0 +1,45 @@
+
+
+.box-titulo-ingresa{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    background: linear-gradient(17.38deg, #3277D8 -2.38%, #DB4DF5 100%);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    
+    .titulo-form-ingresa{
+        font-family: "Actor", sans-serif;
+        color: #ffffff;
+       
+    }
+    
+    .btn-sucess{
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    .btn-sucess button{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .volver{
+        text-align: center;
+        color: #666666;
+    }
+    
+    .back-comentarios{
+    background: linear-gradient(147.21deg, #EEECFF -8.91%, #FFFFFF 99.17%);
+    }
+    
+    .back-logo{
+        background: #ffffff;
+        padding-bottom: 10px;
+    }

@@ -22,7 +22,7 @@ class Dashboard extends Component {
   onCollectionUpdate = (querySnapshot) => {
     const boards = [];
     querySnapshot.forEach((doc) => {
-      const { title, description, author, url } = doc.data();
+      const { title, description, author, url ,tipo} = doc.data();
       boards.push({
         key: doc.id,
         doc, // DocumentSnapshot
@@ -30,6 +30,7 @@ class Dashboard extends Component {
         description,
         author,
         url,
+        tipo
       });
     });
     this.setState({
@@ -56,7 +57,7 @@ class Dashboard extends Component {
               </div>
 
               <div className="content-add-dos">
-                <Link to="/noseaun"><img src={btndos} alt="btndos" />
+                <Link to="/ingresar"><img src={btndos} alt="btndos" />
                 </Link>
               </div>
 

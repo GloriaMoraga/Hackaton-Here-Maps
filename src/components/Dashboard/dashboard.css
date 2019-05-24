@@ -5,4 +5,23 @@
  justify-content: space-evenly;  
 }
 
+.content-add-uno{
+    width: 50%;
+ 
+}
+.content-add-uno img{
+    width: 100%;
+    padding: 5%;
+ 
+}
 
+.content-add-dos{
+    width: 50%;
+}
+
+.content-add-dos img{
+    width: 100%;
+    padding: 5%;
+ 
+
+}

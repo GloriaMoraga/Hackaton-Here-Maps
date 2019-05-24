@@ -26,3 +26,9 @@
     width: 230px;
     height: 60px;
  }
+
+ .nav-tabs a {
+    color: #666;
+    text-decoration: none;
+    
+}

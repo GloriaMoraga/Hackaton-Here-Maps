@@ -14,7 +14,7 @@ const Footer = () => {
                         size="m"
                         drop={direction}
                         variant="secondary"
-                        title={`Lugares Reportados`}
+                        title={`LUGARES REPORTADOS`}
                         id={`dropdown-button-drop-up`}
                         key={direction}
                     >

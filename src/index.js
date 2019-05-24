@@ -7,6 +7,7 @@ import RegisterPage from './components/RegisterPage/RegisterPage'
 import HomePage from './components/HomePage/HomePage.js';
 import Dashboard from './components/Dashboard/Dashboard.js';
 import Edit from './components/Comentarios/Edit.js';
+import Ingresa from './components/Ingresa/Ingresa.js';
 import Create from './components/Comentarios/Create.js';
 import Show from './components/Comentarios/Show.js';
 import * as serviceWorker from './serviceWorker';
@@ -23,6 +24,7 @@ ReactDOM.render(<Router>
       <Route exact path='/app' component={App} />
       <Route path='/edit/:id' component={Edit} />
       <Route path='/create' component={Create} />
+      <Route path='/ingresar' component={Ingresa} />
      <Route path='/show/:id' component={Show} />
       
     </div>
