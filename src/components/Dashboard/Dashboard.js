@@ -70,12 +70,12 @@ class Dashboard extends Component {
               {this.state.boards.map((board, i) =>
 
                 <div key={i} className="card-box">
-                  <Card className="card-box mt-2 mb-3" style={{ width: '18rem' }}>
+                  <Card className="card-box mt-2 mb-3" style={{ width: '100%' }}>
                     <Card.Img variant="top" src={testPrueba} />
                     <Card.Body>
-                      <Card.Title>{board.title}</Card.Title>
+                      <Card.Title>{board.description}</Card.Title>
                       <Card.Text>
-                        {board.description}
+                        <p><b>Tipo de Reporte: </b>{board.title}</p>
                         <Link to={`/show/${board.key}`}>
                           <span className="badge badge-primary badge-pill">{board.author}</span></Link>
                       </Card.Text>
