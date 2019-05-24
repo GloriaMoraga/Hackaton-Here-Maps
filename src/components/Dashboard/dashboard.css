@@ -25,3 +25,12 @@
  
 
 }
+
+.autor-class{
+    display:flex;
+    justify-content: space-between;
+}
+
+.pin{
+    width: 30px;
+}
