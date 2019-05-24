@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Map from './components/mapas/Mapas.js';
 import Header from './components/header/Header.js';
 import Footer from './components/footer/Footer.js';
 import Firebase from './firebaseConfig';
-import Dashboard from './components/Dashboard/Dashboard';
 
 
 
