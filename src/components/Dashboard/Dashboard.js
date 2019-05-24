@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './dashboard.css';
 import Firebase from '../../firebaseConfig.js';
-import { Container, Col, Row, Card, Button } from 'react-bootstrap';
+import { Container, Col, Row, Card} from 'react-bootstrap';
 import btnuno from '../../images/botonuno.png';
 import btndos from '../../images/botondos.png';
 import Header from '../header/Header.js';
@@ -70,16 +70,15 @@ class Dashboard extends Component {
               {this.state.boards.map((board, i) =>
 
                 <div key={i} className="card-box">
-                  <Card className="card-box mt-2 mb-3" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={board.url} />
+                  <Card className="card-box mt-2 mb-3" style={{ width: '100%' }}>
+                  <Link to={`/show/${board.key}`}>
+                          <span className="badge badge-primary badge-pill ml-4 mt-3">{board.title}</span></Link>
+                    <Card.Img variant="top"src={board.url}  />
                     <Card.Body>
-                      <Card.Title>{board.title}</Card.Title>
+                      <Card.Title>{board.description}</Card.Title>
                       <Card.Text>
-                        {board.description}
-                        <Link to={`/show/${board.key}`}>
-                          <span className="badge badge-primary badge-pill">{board.author}</span></Link>
+                        Usuario: {board.author}
                       </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                   </Card>
                 </div>
