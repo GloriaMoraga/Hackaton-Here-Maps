@@ -3,6 +3,7 @@ import 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyB1H0h34raCTUdfdLNFEqSqMAjSFe9I5pM",
     authDomain: "hackaton-here.firebaseapp.com",

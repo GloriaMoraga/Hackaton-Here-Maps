@@ -52,7 +52,7 @@ class Create extends Component {
           <Row>
               <Col xs={12} md={12} lg={12} >
               <h3 className="text-center mt-2">
-              Crea una Tarea
+              
             </h3>
             </Col>
             
