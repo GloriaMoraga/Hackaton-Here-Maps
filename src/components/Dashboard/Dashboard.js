@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './dashboard.css';
 import Firebase from '../../firebaseConfig.js';
-import { Container, Col, Row, Card, Button} from 'react-bootstrap';
+import { Container, Col, Row, Card, Button } from 'react-bootstrap';
 import testPrueba from '../../images/testimage2.png';
 import btnuno from '../../images/botonuno.png';
 import btndos from '../../images/botondos.png';
@@ -44,49 +44,49 @@ class Dashboard extends Component {
   render() {
     return (
 
- <div>
+      <div>
         <Header />
-       
-        <Container >  
-         <Row>    
-           <Col xs={12} md={12} lg={12} className="addWork">
-           <div className="content-add-uno">
-               <Link to="/create"><img src={btnuno} alt="btnuno"/>
-               </Link>
-           </div>
-           
-           <div className="content-add-dos">
-               <Link to="/noseaun"><img src={btndos} alt="btndos"/>
-               </Link>
-           </div>
-           
-           </Col>
-           
-           
-           
-       
 
-          <Col  xs={12} md={12} lg={12} className="tareas">
-           {this.state.boards.map(board =>
+        <Container >
+          <Row>
+            <Col xs={12} md={12} lg={12} className="addWork">
+              <div className="content-add-uno">
+                <Link to="/create"><img src={btnuno} alt="btnuno" />
+                </Link>
+              </div>
 
-           <div className="card-box">
-           <Card className="card-box mt-2 mb-3" style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={testPrueba} />
-            <Card.Body>
-               <Card.Title>{board.title}</Card.Title>
-            <Card.Text>
-            {board.description}
-            <Link to={`/show/${board.key}`}>
-             <span class="badge badge-primary badge-pill">{board.author}</span></Link> 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-            </Card>
-          </div>
-           )}
-             
-           
-           </Col>
+              <div className="content-add-dos">
+                <Link to="/noseaun"><img src={btndos} alt="btndos" />
+                </Link>
+              </div>
+
+            </Col>
+
+
+
+
+
+            <Col xs={12} md={12} lg={12} className="tareas">
+              {this.state.boards.map((board, i) =>
+
+                <div key={i} className="card-box">
+                  <Card className="card-box mt-2 mb-3" style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={testPrueba} />
+                    <Card.Body>
+                      <Card.Title>{board.title}</Card.Title>
+                      <Card.Text>
+                        {board.description}
+                        <Link to={`/show/${board.key}`}>
+                          <span className="badge badge-primary badge-pill">{board.author}</span></Link>
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </div>
+              )}
+
+
+            </Col>
 
 
 
