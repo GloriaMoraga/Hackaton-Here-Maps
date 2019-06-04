@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Hackaton-Here-Maps/precache-manifest.f1d458ca468e1f6d90c6c2566fc302e2.js"
+  "/Hackaton-Here-Maps/precache-manifest.3064c0a16dcb42ef924e7f8df12537fa.js"
 );
 
 self.addEventListener('message', (event) => {
