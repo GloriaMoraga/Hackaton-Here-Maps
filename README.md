@@ -5,5 +5,7 @@ https://hackaton-here.firebaseapp.com/
 
 # Autoras
 Gloria Moraga
-   Milexys Ferrer
-     Pauina Contreras
+
+Milexys Ferrer
+
+Paulina Contreras
