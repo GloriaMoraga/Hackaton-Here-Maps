@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/GloriaMoraga/Hackaton-Here-Maps/static/css/main.c39bee6c.chunk.css",
+    "main.js": "/GloriaMoraga/Hackaton-Here-Maps/static/js/main.b6921491.chunk.js",
+    "main.js.map": "/GloriaMoraga/Hackaton-Here-Maps/static/js/main.b6921491.chunk.js.map",
+    "runtime~main.js": "/GloriaMoraga/Hackaton-Here-Maps/static/js/runtime~main.b176dae7.js",
+    "runtime~main.js.map": "/GloriaMoraga/Hackaton-Here-Maps/static/js/runtime~main.b176dae7.js.map",
+    "static/css/2.266e55a5.chunk.css": "/GloriaMoraga/Hackaton-Here-Maps/static/css/2.266e55a5.chunk.css",
+    "static/js/2.2b0ccc0c.chunk.js": "/GloriaMoraga/Hackaton-Here-Maps/static/js/2.2b0ccc0c.chunk.js",
+    "static/js/2.2b0ccc0c.chunk.js.map": "/GloriaMoraga/Hackaton-Here-Maps/static/js/2.2b0ccc0c.chunk.js.map",
+    "index.html": "/GloriaMoraga/Hackaton-Here-Maps/index.html",
+    "precache-manifest.6f68a7959f300c4481de05b0b00aa22b.js": "/GloriaMoraga/Hackaton-Here-Maps/precache-manifest.6f68a7959f300c4481de05b0b00aa22b.js",
+    "service-worker.js": "/GloriaMoraga/Hackaton-Here-Maps/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/GloriaMoraga/Hackaton-Here-Maps/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.c39bee6c.chunk.css.map": "/GloriaMoraga/Hackaton-Here-Maps/static/css/main.c39bee6c.chunk.css.map",
+    "static/media/botondos.png": "/GloriaMoraga/Hackaton-Here-Maps/static/media/botondos.57a4a6e8.png",
+    "static/media/botonuno.png": "/GloriaMoraga/Hackaton-Here-Maps/static/media/botonuno.c370386c.png"
+  }
+}
