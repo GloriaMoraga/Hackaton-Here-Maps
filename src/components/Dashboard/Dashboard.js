@@ -51,7 +51,8 @@ class Dashboard extends Component {
 
         <Container >
           <Row>
-            <Col xs={12} md={12} lg={12} className="addWork">
+            <Col xs={12} sm={2} lg={3}></Col>
+            <Col xs={12} sm={8} lg={6} className="addWork">
               <div className="content-add-uno">
                 <Link to="/create"><img src={btnuno} alt="btnuno" />
                 </Link>
@@ -63,12 +64,14 @@ class Dashboard extends Component {
               </div>
 
             </Col>
+            <Col xs={12} sm={2} lg={3}></Col>
+            </Row>
 
 
 
-
-
-            <Col xs={12} md={12} lg={12} className="tareas">
+            <Row>
+            <Col xs={12} sm={2} lg={3}></Col>
+            <Col xs={12} sm={8} lg={6} className="tareas">
               {this.state.boards.map((board, i) =>
 
                 <div key={i} className="card-box">
@@ -88,6 +91,7 @@ class Dashboard extends Component {
 
 
             </Col>
+            <Col xs={12} sm={2} lg={3}></Col>
 
 
 

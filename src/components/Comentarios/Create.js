@@ -100,8 +100,7 @@ class Create extends Component {
     return (
       <div className="back-comentarios">
    
-        <Container>
-          <Row>
+       
              <Col className="back-logo" xs={12} md={12} lg={12} >
               <div className="logo-header">
               <Link to="/dashboard"><img className='logo' src={LogoHeader} alt="logo"/> </Link>
@@ -112,9 +111,10 @@ class Create extends Component {
 
               <h4 className="titulo-form">REPORTAR INCIDENCIA</h4>
             </Col>
-            
-        
-          <Col xs={12} md={12} lg={12} >
+            <Container>
+          <Row>
+            <Col xs={12} md={3} lg={3} ></Col>
+          <Col xs={12} md={6} lg={6} >
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                  <label >Foto</label> 
@@ -162,6 +162,7 @@ class Create extends Component {
 
             </form>
             </Col>
+            <Col xs={12} md={3} lg={3} ></Col>
           </Row>
 
           

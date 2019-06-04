@@ -4,6 +4,7 @@ import Firebase from '../../firebaseConfig'
 import { Link } from 'react-router-dom';
 import './loginPage.css';
 import iconblue from '../../images/logoblue.png';
+import { Container, Col, Row} from 'react-bootstrap';
 
 class LoginPage extends Component {
     constructor(props){
@@ -35,7 +36,11 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div className="loginPage">
+            <Container>
+                <Row>
+                <Col xs={12} sm={2} lg={2}></Col>
+                <Col xs={12} sm={8} lg={8}>
+                 <div className="loginPage">
                 <div className="base">
                     <div className="logo-login">
                         <img src={iconblue} alt="logo vecinapp"/>
@@ -60,6 +65,10 @@ class LoginPage extends Component {
                     </div>
                 </div>
             </div>
+               </Col>
+              <Col xs={12} sm={2} lg={2}></Col>
+            </Row>
+            </Container>
         )
     }
 }
