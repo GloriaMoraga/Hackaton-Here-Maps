@@ -3,7 +3,7 @@ Proyecto Hackaton con Mapas de HERE con REACT.
 # Deploy
 https://hackaton-here.firebaseapp.com/
 
-# Deploy
+# Autoras
 Gloria Moraga
-Milexys Ferrer
-Pauina Contreras
+   Milexys Ferrer
+     Pauina Contreras
